@@ -1,12 +1,14 @@
 package org.firstinspires.ftc.teamcode;
 
 // Import the necessary packages for instantiating Motor
+
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.IMU;
+
 import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 
-public class Drivetrain{
+public class DrivetrainPB {
     private double y; //value of y on joystick
     private double x; //value of x on joystick
     private double rx; //rotation value
@@ -29,10 +31,10 @@ public class Drivetrain{
     DcMotor MTR_RF;
     DcMotor MTR_RB;
     IMU imu;
-    FieldCentric_Comp_Bot bot;
+    PusherBot bot;
 
     // instantiation of the class
-    public Drivetrain(FieldCentric_Comp_Bot iBot) {
+    public DrivetrainPB(PusherBot iBot) {
         // Take the passed in value of gamepad1 and telemetry and assign to class variables.
         bot = iBot;
 
