@@ -68,12 +68,10 @@ public class FieldCentric_Comp_Bot extends LinearOpMode{
             if (gamepad2.right_stick_y < -0.1){
                 myGripper.moveSlideHigh();
             }
-            else if(gamepad2.right_stick_y > 0.1){
-                myGripper.manualMove(gamepad2.left_stick_y);
+            else if(gamepad2.right_stick_y > -0.1){
+                myGripper.moveSlideDown();
             }
-            else if(gamepad2.right_stick_y > -0.1 && gamepad2.right_stick_y < 0.1){
-                myGripper.noMove();
-            }
+
 
 
 
