@@ -83,6 +83,14 @@ public class Gripper{
         MTR_RVS.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         powerArm();
     }
+    //NoMove is a method meant to stop the motor entirely -Anya
+    public void noMove() {
+        MTR_LVS.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        MTR_RVS.setMode(DcMotor.RunMode.RUN_USING_ENCODER);
+        MTR_RVS.setPower(0);
+        MTR_LVS.setPower(0);
+    }
+
     public void moveSlideHigh() {
         MTR_LVS.setTargetPosition(2000);
         MTR_RVS.setTargetPosition(2000);

@@ -65,14 +65,17 @@ public class FieldCentric_Comp_Bot extends LinearOpMode{
                 myGripper.moveSlideLow();
             }
              */
-            else if (gamepad2.x){
-                myGripper.moveSlideMiddle();
-            }
-            /*
-            else if (gamepad2.a){
+            if (gamepad2.right_stick_y < -0.1){
                 myGripper.moveSlideHigh();
             }
-             */
+            else if(gamepad2.right_stick_y > 0.1){
+                myGripper.manualMove(gamepad2.left_stick_y);
+            }
+            else if(gamepad2.right_stick_y > -0.1 && gamepad2.right_stick_y < 0.1){
+                myGripper.noMove();
+            }
+
+
 
             // Hotkeys (to change gripper position)
             if (gamepad2.left_trigger != 0) {

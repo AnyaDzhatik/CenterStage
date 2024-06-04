@@ -11,9 +11,9 @@ public class Ramp{
     public static final double SET = 1;
     public static final double STORE = 0; // static variable denoting ramp stored
     public static final double DOWN = -1;
-    public final double angUp = 0.6;  // static variable denoting ramp up
-    public final double angStore = 0.4; // static variable denoting ramp stored
-    public final double angDown = 0.20; // static variable denoting ramp down
+    public final double angUp = 0.8;  // static variable denoting ramp up
+    public final double angStore = 0.6; // static variable denoting ramp stored
+    public final double angDown = 0.40; // static variable denoting ramp down
     public static final int STORE_WITH_PIXEL = 9; // static variable denoting ramp stored with pixel
 
     // TODO: need to define what store with pixel is/ how we can change it

@@ -20,9 +20,7 @@ public class PusherBot extends LinearOpMode{
             //**************************************************************************************
             // ---------------------Gamepad 1 Controls ---------------------------------------------
             myDriveTrain.drive();
-
-            // ---------------------Gamepad 2 Controls ---------------------------------------------
-            if(gamepad2.left_bumper && gamepad2.right_bumper){myDrone.launchDrone();}
+            if(gamepad1.left_bumper && gamepad1.right_bumper){myDrone.launchDrone();}
 
             //--------------------- TELEMETRY Code --------------------------------------------
             // Useful telemetry data in case needed for testing and to find heading of robot
