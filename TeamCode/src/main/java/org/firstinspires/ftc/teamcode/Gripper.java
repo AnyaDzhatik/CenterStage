@@ -60,8 +60,8 @@ public class Gripper{
     }
 
     public void moveSlideDown() {
-        MTR_LVS.setTargetPosition(0);
-        MTR_RVS.setTargetPosition(0);
+        MTR_LVS.setTargetPosition(50);
+        MTR_RVS.setTargetPosition(50);
         guardGripper();
         MTR_LVS.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         MTR_RVS.setMode(DcMotor.RunMode.RUN_TO_POSITION);
@@ -83,9 +83,11 @@ public class Gripper{
         MTR_RVS.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         powerArm();
     }
+
+
     public void moveSlideHigh() {
-        MTR_LVS.setTargetPosition(2000);
-        MTR_RVS.setTargetPosition(2000);
+        MTR_LVS.setTargetPosition(2500);
+        MTR_RVS.setTargetPosition(2500);
         MTR_LVS.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         MTR_RVS.setMode(DcMotor.RunMode.RUN_TO_POSITION);
         powerArm();
