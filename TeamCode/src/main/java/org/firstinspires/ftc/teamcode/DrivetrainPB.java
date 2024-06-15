@@ -43,7 +43,7 @@ public class DrivetrainPB {
         MTR_LF.setDirection(DcMotor.Direction.REVERSE); // Reverse Motor
 
         MTR_LB = bot.hardwareMap.dcMotor.get("left_back_mtr");
-        MTR_LB.setDirection(DcMotor.Direction.REVERSE); // Reverse Motor
+       // MTR_LB.setDirection(DcMotor.Direction.REVERSE); // Reverse Motor
 
         MTR_RF = bot.hardwareMap.dcMotor.get("right_front_mtr");
         MTR_RB = bot.hardwareMap.dcMotor.get("right_back_mtr");
@@ -52,7 +52,7 @@ public class DrivetrainPB {
         imu = bot.hardwareMap.get(IMU.class, "imu");
         IMU.Parameters parameters = new IMU.Parameters(new RevHubOrientationOnRobot(
                 RevHubOrientationOnRobot.LogoFacingDirection.UP,
-                RevHubOrientationOnRobot.UsbFacingDirection.LEFT));
+                 RevHubOrientationOnRobot.UsbFacingDirection.FORWARD));
         imu.initialize(parameters);
         //TODO: Test the IMU parameters and see if it works
 
@@ -87,6 +87,7 @@ public class DrivetrainPB {
         MTR_RF.setPower(rightFrontPower);
         MTR_RB.setPower(rightBackPower);
     }
+
 
     // Returns power to left front motor
     public double getLeftFrontPower() {
