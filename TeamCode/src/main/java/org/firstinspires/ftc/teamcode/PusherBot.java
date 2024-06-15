@@ -6,13 +6,12 @@ import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 @TeleOp
 public class PusherBot extends LinearOpMode{
     DrivetrainPB myDriveTrain = null;
-    DronePB myDrone;
+
 
     //@Override
 
     public void runOpMode() throws InterruptedException {
         myDriveTrain = new DrivetrainPB(this);
-        myDrone = new DronePB(this);
 
         waitForStart();
         if (isStopRequested()) return;
@@ -20,7 +19,6 @@ public class PusherBot extends LinearOpMode{
             //**************************************************************************************
             // ---------------------Gamepad 1 Controls ---------------------------------------------
             myDriveTrain.drive();
-            if(gamepad1.left_bumper && gamepad1.right_bumper){myDrone.launchDrone();}
 
             //--------------------- TELEMETRY Code --------------------------------------------
             // Useful telemetry data in case needed for testing and to find heading of robot
